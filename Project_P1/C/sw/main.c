@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 
+/*Asta e primul push de la facultate*/
 /*Pentru build: CTRL+SHIFT+B*/
 int main(void) {
     initializeMessages();
