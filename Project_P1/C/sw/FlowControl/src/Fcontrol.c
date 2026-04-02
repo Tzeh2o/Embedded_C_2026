@@ -16,4 +16,4 @@ void sendMessages()
         send_can_frame(CAN_MESSAGES[i]);
         Sleep(150);
     }
-}
+} 
