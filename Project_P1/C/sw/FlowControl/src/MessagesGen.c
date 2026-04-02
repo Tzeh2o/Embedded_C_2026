@@ -20,4 +20,4 @@ CANFrame LDA_FC2 = {
     LDA_FC2_DLC                                                 // dlc
 };
 
-CANFrame CAN_MESSAGES[MESSAGES_COUNT];
+CANFrame CAN_MESSAGES[MESSAGES_COUNT]; // ULBS
