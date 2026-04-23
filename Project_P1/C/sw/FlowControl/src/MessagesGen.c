@@ -19,5 +19,24 @@ CANFrame LDA_FC2 = {
     {0x00, 0x00, 0xFF, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE},           // data
     LDA_FC2_DLC                                                 // dlc
 };
+/*MSG_0x40 Message*/
+#define MSG_0x40_IDENT 0x40u
+#define MSG_0x40_DLC 16u
+
+CANFrame MSG_0x40 = {
+    MSG_0x40_IDENT,                                              // id
+    {0xAA, 0xBB, 0x00},                                          // data
+    MSG_0x40_DLC                                                 // dlc
+};
+
+/*MSG_0x12DD5528 Message*/
+#define MSG_0x12DD5528_IDENT 0x12DD5528u
+#define MSG_0x12DD5528_DLC 64u
+
+CANFrame MSG_0x12DD5528 = {
+    MSG_0x12DD5528_IDENT,                                              // id
+    {0xCC, 0xDD, 0x00},                                                // data
+    MSG_0x12DD5528_DLC                                                 // dlc
+};
 
 CANFrame CAN_MESSAGES[MESSAGES_COUNT];

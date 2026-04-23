@@ -1,31 +1,31 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram id="arch_overview" name="Arhitectura Finala">
-    <mxGraphModel dx="1674" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="834" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" background="light-dark(#FFFFFF,#1F1F1F)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="Project_P1 -- Arhitectura Finala&#xa;CAN / CAN FD Message Transmission Simulator" style="text;html=1;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="400" y="20" width="800" height="50" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Project_P1 -- Arhitectura Finala&#xa;CAN / CAN FD Message Transmission Simulator" vertex="1">
+          <mxGeometry height="50" width="800" x="400" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="main_group" value="main.c" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;rounded=1;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="580" y="100" width="440" height="200" as="geometry" />
+        <mxCell id="main_group" parent="1" style="swimlane;startSize=30;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=14;rounded=1;arcSize=10;labelBackgroundColor=none;fontColor=#E4FDE1;" value="main.c" vertex="1">
+          <mxGeometry height="200" width="440" x="580" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="main_srand" value="srand(time(NULL))&#xa;Initializare generator random" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="main_group" vertex="1">
-          <mxGeometry x="20" y="45" width="190" height="45" as="geometry" />
+        <mxCell id="main_srand" parent="main_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=11;labelBackgroundColor=none;fontColor=#E4FDE1;" value="srand(time(NULL))&#xa;Initializare generator random" vertex="1">
+          <mxGeometry height="45" width="190" x="20" y="45" as="geometry" />
         </mxCell>
-        <mxCell id="main_init" value="initializeMessages()&#xa;Populeaza CAN_MESSAGES[]" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="main_group" vertex="1">
-          <mxGeometry x="230" y="45" width="190" height="45" as="geometry" />
+        <mxCell id="main_init" parent="main_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=11;labelBackgroundColor=none;fontColor=#E4FDE1;" value="initializeMessages()&#xa;Populeaza CAN_MESSAGES[]" vertex="1">
+          <mxGeometry height="45" width="190" x="230" y="45" as="geometry" />
         </mxCell>
-        <mxCell id="main_loop" value="BUCLA INFINITA&#xa;for(;;)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" parent="main_group" vertex="1">
-          <mxGeometry x="50" y="115" width="160" height="60" as="geometry" />
+        <mxCell id="main_loop" parent="main_group" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=12;fontStyle=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="BUCLA INFINITA&#xa;for(;;)" vertex="1">
+          <mxGeometry height="60" width="160" x="50" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="main_sched" value="scheduler()&#xa;Gestioneaza ciclicitatile" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="main_group" vertex="1">
-          <mxGeometry x="240" y="115" width="180" height="60" as="geometry" />
+        <mxCell id="main_sched" parent="main_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=11;labelBackgroundColor=none;fontColor=#E4FDE1;" value="scheduler()&#xa;Gestioneaza ciclicitatile" vertex="1">
+          <mxGeometry height="60" width="180" x="240" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="e_srand_init" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;" parent="main_group" source="main_srand" target="main_init" edge="1">
+        <mxCell id="e_srand_init" edge="1" parent="main_group" source="main_srand" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="main_init">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_init_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;" parent="main_group" source="main_init" target="main_loop" edge="1">
+        <mxCell id="e_init_loop" edge="1" parent="main_group" source="main_init" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="main_loop">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="325" y="100" />
@@ -33,76 +33,76 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_loop_sched" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;" parent="main_group" source="main_loop" target="main_sched" edge="1">
+        <mxCell id="e_loop_sched" edge="1" parent="main_group" source="main_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="main_sched">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dt_group" value="DataTypes" style="swimlane;startSize=25;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;rounded=1;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="50" y="120" width="220" height="160" as="geometry" />
+        <mxCell id="dt_group" parent="1" style="swimlane;startSize=25;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=13;rounded=1;arcSize=10;labelBackgroundColor=none;fontColor=#E4FDE1;" value="DataTypes" vertex="1">
+          <mxGeometry height="160" width="220" x="50" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="dt_types" value="Types.h&#xa;&#xa;uint8, uint16, uint32, uint64&#xa;bool" style="shape=note;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;size=14;fontColor=#333333;" parent="dt_group" vertex="1">
-          <mxGeometry x="20" y="35" width="180" height="110" as="geometry" />
+        <mxCell id="dt_types" parent="dt_group" style="shape=note;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;size=14;fontColor=#E4FDE1;labelBackgroundColor=none;" value="Types.h&#xa;&#xa;uint8, uint16, uint32, uint64&#xa;bool" vertex="1">
+          <mxGeometry height="110" width="180" x="20" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="fc_group" value="FlowControl" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;rounded=1;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="120" y="370" width="1360" height="330" as="geometry" />
+        <mxCell id="fc_group" parent="1" style="swimlane;startSize=30;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=14;rounded=1;arcSize=10;labelBackgroundColor=none;fontColor=#E4FDE1;" value="FlowControl" vertex="1">
+          <mxGeometry height="330" width="1360" x="120" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="fc_header" value="Fcontrol.h" style="swimlane;startSize=22;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;rounded=1;" parent="fc_group" vertex="1">
-          <mxGeometry x="20" y="45" width="280" height="275" as="geometry" />
+        <mxCell id="fc_header" parent="fc_group" style="swimlane;startSize=22;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=11;rounded=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Fcontrol.h" vertex="1">
+          <mxGeometry height="275" width="280" x="20" y="45" as="geometry" />
         </mxCell>
-        <mxCell id="fc_canfd_size" value="#define CAN_FD_MAX_SIZE 64" style="text;fontSize=10;fontFamily=Courier New;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;spacingLeft=4;spacingRight=4;" parent="fc_header" vertex="1">
-          <mxGeometry x="10" y="30" width="260" height="25" as="geometry" />
+        <mxCell id="fc_canfd_size" parent="fc_header" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;spacingRight=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="#define CAN_FD_MAX_SIZE 64" vertex="1">
+          <mxGeometry height="25" width="260" x="10" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="fc_struct" value="typedef struct {&#xa;    uint32 id;           // CAN ID (29-bit)&#xa;    uint8  data[64];     // Payload CAN FD&#xa;    uint8  dlc;          // Data Length Code&#xa;    uint16 cycle_ms;     // Ciclicitate (ms)&#xa;    uint8  counter;      // Contor ciclic&#xa;} CANFrame;" style="text;fontSize=10;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;" parent="fc_header" vertex="1">
-          <mxGeometry x="10" y="62" width="260" height="115" as="geometry" />
+        <mxCell id="fc_struct" parent="fc_header" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="typedef struct {&#xa;    uint32 id;           // CAN ID (29-bit)&#xa;    uint8  data[64];     // Payload CAN FD&#xa;    uint8  dlc;          // Data Length Code&#xa;    uint16 cycle_ms;     // Ciclicitate (ms)&#xa;    uint8  counter;      // Contor ciclic&#xa;} CANFrame;" vertex="1">
+          <mxGeometry height="115" width="260" x="10" y="62" as="geometry" />
         </mxCell>
-        <mxCell id="fc_func_decl" value="send_can_frame(CANFrame*)&#xa;sendMessages()&#xa;prepareMessageData(CANFrame*)" style="text;fontSize=10;fontFamily=Courier New;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;" parent="fc_header" vertex="1">
-          <mxGeometry x="10" y="185" width="260" height="60" as="geometry" />
+        <mxCell id="fc_func_decl" parent="fc_header" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="send_can_frame(CANFrame*)&#xa;sendMessages()&#xa;prepareMessageData(CANFrame*)" vertex="1">
+          <mxGeometry height="60" width="260" x="10" y="185" as="geometry" />
         </mxCell>
-        <mxCell id="msg_header" value="Messages.h" style="swimlane;startSize=22;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;rounded=1;" parent="fc_group" vertex="1">
-          <mxGeometry x="330" y="45" width="260" height="275" as="geometry" />
+        <mxCell id="msg_header" parent="fc_group" style="swimlane;startSize=22;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=11;rounded=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Messages.h" vertex="1">
+          <mxGeometry height="275" width="260" x="330" y="45" as="geometry" />
         </mxCell>
-        <mxCell id="msg_count" value="#define MESSAGES_COUNT 4" style="text;fontSize=10;fontFamily=Courier New;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;spacingLeft=4;spacingRight=4;" parent="msg_header" vertex="1">
-          <mxGeometry x="10" y="30" width="240" height="25" as="geometry" />
+        <mxCell id="msg_count" parent="msg_header" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;spacingRight=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="#define MESSAGES_COUNT 4" vertex="1">
+          <mxGeometry height="25" width="240" x="10" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="msg_externs" value="extern CANFrame LDA_FC1;&#xa;extern CANFrame LDA_FC2;&#xa;extern CANFrame MSG_0x40;&#xa;extern CANFrame MSG_0x12DD5528;&#xa;extern CANFrame CAN_MESSAGES[4];" style="text;fontSize=10;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;" parent="msg_header" vertex="1">
-          <mxGeometry x="10" y="62" width="240" height="90" as="geometry" />
+        <mxCell id="msg_externs" parent="msg_header" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="extern CANFrame LDA_FC1;&#xa;extern CANFrame LDA_FC2;&#xa;extern CANFrame MSG_0x40;&#xa;extern CANFrame MSG_0x12DD5528;&#xa;extern CANFrame CAN_MESSAGES[4];" vertex="1">
+          <mxGeometry height="90" width="240" x="10" y="62" as="geometry" />
         </mxCell>
-        <mxCell id="msg_initfn" value="initializeMessages()&#xa;Populeaza CAN_MESSAGES[]&#xa;cu toate cele 4 mesaje" style="text;fontSize=10;fontFamily=Courier New;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;" parent="msg_header" vertex="1">
-          <mxGeometry x="10" y="165" width="240" height="55" as="geometry" />
+        <mxCell id="msg_initfn" parent="msg_header" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;align=left;verticalAlign=top;spacingTop=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="initializeMessages()&#xa;Populeaza CAN_MESSAGES[]&#xa;cu toate cele 4 mesaje" vertex="1">
+          <mxGeometry height="55" width="240" x="10" y="165" as="geometry" />
         </mxCell>
-        <mxCell id="msggen" value="MessagesGen.c" style="swimlane;startSize=22;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;rounded=1;" parent="fc_group" vertex="1">
-          <mxGeometry x="620" y="45" width="340" height="275" as="geometry" />
+        <mxCell id="msggen" parent="fc_group" style="swimlane;startSize=22;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=11;rounded=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="MessagesGen.c" vertex="1">
+          <mxGeometry height="275" width="340" x="620" y="45" as="geometry" />
         </mxCell>
-        <mxCell id="msg1" value="LDA_FC1&#xa;ID=0x12 | DLC=8 | Ciclu=150ms&#xa;Date statice" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;align=center;" parent="msggen" vertex="1">
-          <mxGeometry x="10" y="30" width="150" height="50" as="geometry" />
+        <mxCell id="msg1" parent="msggen" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;align=center;labelBackgroundColor=none;fontColor=#E4FDE1;" value="LDA_FC1&#xa;ID=0x12 | DLC=8 | Ciclu=150ms&#xa;Date statice" vertex="1">
+          <mxGeometry height="50" width="150" x="10" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="msg2" value="LDA_FC2&#xa;ID=0xAB | DLC=8 | Ciclu=150ms&#xa;Date statice" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;align=center;" parent="msggen" vertex="1">
-          <mxGeometry x="175" y="30" width="155" height="50" as="geometry" />
+        <mxCell id="msg2" parent="msggen" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;align=center;labelBackgroundColor=none;fontColor=#E4FDE1;" value="LDA_FC2&#xa;ID=0xAB | DLC=8 | Ciclu=150ms&#xa;Date statice" vertex="1">
+          <mxGeometry height="50" width="155" x="175" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="msg3" value="MSG_0x40  (NOU)&#xa;ID=0x40 | DLC=16 | Ciclu=40ms&#xa;data[3..15] = random&#xa;data[2].lo = contor ciclic" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;align=center;" parent="msggen" vertex="1">
-          <mxGeometry x="10" y="95" width="155" height="70" as="geometry" />
+        <mxCell id="msg3" parent="msggen" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;fontStyle=1;align=center;labelBackgroundColor=none;fontColor=#E4FDE1;" value="MSG_0x40  (NOU)&#xa;ID=0x40 | DLC=16 | Ciclu=40ms&#xa;data[3..15] = random&#xa;data[2].lo = contor ciclic" vertex="1">
+          <mxGeometry height="70" width="155" x="10" y="95" as="geometry" />
         </mxCell>
-        <mxCell id="msg4" value="MSG_0x12DD5528  (NOU)&#xa;ID=0x12DD5528 | DLC=64 | Ciclu=80ms&#xa;data[3..63] = random&#xa;data[2].lo = contor ciclic" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;align=center;" parent="msggen" vertex="1">
-          <mxGeometry x="175" y="95" width="155" height="70" as="geometry" />
+        <mxCell id="msg4" parent="msggen" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;fontStyle=1;align=center;labelBackgroundColor=none;fontColor=#E4FDE1;" value="MSG_0x12DD5528  (NOU)&#xa;ID=0x12DD5528 | DLC=64 | Ciclu=80ms&#xa;data[3..63] = random&#xa;data[2].lo = contor ciclic" vertex="1">
+          <mxGeometry height="70" width="155" x="175" y="95" as="geometry" />
         </mxCell>
-        <mxCell id="msggen_arr" value="CANFrame CAN_MESSAGES[4];" style="text;fontSize=10;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;rounded=1;spacingLeft=4;" parent="msggen" vertex="1">
-          <mxGeometry x="10" y="180" width="320" height="25" as="geometry" />
+        <mxCell id="msggen_arr" parent="msggen" style="text;fontSize=10;fontFamily=Courier New;fillColor=#F45B69;strokeColor=#028090;rounded=1;spacingLeft=4;labelBackgroundColor=none;fontColor=#E4FDE1;" value="CANFrame CAN_MESSAGES[4];" vertex="1">
+          <mxGeometry height="25" width="320" x="10" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="fctrl_src" value="Fcontrol.c" style="swimlane;startSize=22;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;rounded=1;" parent="fc_group" vertex="1">
-          <mxGeometry x="990" y="45" width="350" height="275" as="geometry" />
+        <mxCell id="fctrl_src" parent="fc_group" style="swimlane;startSize=22;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=11;rounded=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Fcontrol.c" vertex="1">
+          <mxGeometry height="275" width="350" x="990" y="45" as="geometry" />
         </mxCell>
-        <mxCell id="fn_prepare" value="prepareMessageData(CANFrame* frame)&#xa;&#xa;1. Incrementeaza frame-&gt;counter (1..F)&#xa;2. Seteaza nibble-ul inferior data[2]&#xa;3. Genereaza random data[3..DLC-1]" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;" parent="fctrl_src" vertex="1">
-          <mxGeometry x="10" y="30" width="330" height="80" as="geometry" />
+        <mxCell id="fn_prepare" parent="fctrl_src" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;labelBackgroundColor=none;fontColor=#E4FDE1;" value="prepareMessageData(CANFrame* frame)&#xa;&#xa;1. Incrementeaza frame-&gt;counter (1..F)&#xa;2. Seteaza nibble-ul inferior data[2]&#xa;3. Genereaza random data[3..DLC-1]" vertex="1">
+          <mxGeometry height="80" width="330" x="10" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="fn_send" value="send_can_frame(CANFrame* frame)&#xa;&#xa;Afiseaza: Tx: ID=0x... DLC=... Data=[...]&#xa;Suporta ID pe 32-bit si DLC variabil" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;" parent="fctrl_src" vertex="1">
-          <mxGeometry x="10" y="120" width="330" height="60" as="geometry" />
+        <mxCell id="fn_send" parent="fctrl_src" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;labelBackgroundColor=none;fontColor=#E4FDE1;" value="send_can_frame(CANFrame* frame)&#xa;&#xa;Afiseaza: Tx: ID=0x... DLC=... Data=[...]&#xa;Suporta ID pe 32-bit si DLC variabil" vertex="1">
+          <mxGeometry height="60" width="330" x="10" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="fn_sendmsgs" value="sendMessages() / scheduler()&#xa;&#xa;Verifica elapsed time per mesaj.&#xa;Daca cycle_ms a expirat:&#xa;  prepareMessageData() -&gt; send_can_frame()" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;" parent="fctrl_src" vertex="1">
-          <mxGeometry x="10" y="190" width="330" height="80" as="geometry" />
+        <mxCell id="fn_sendmsgs" parent="fctrl_src" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=10;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;labelBackgroundColor=none;fontColor=#E4FDE1;" value="sendMessages() / scheduler()&#xa;&#xa;Verifica elapsed time per mesaj.&#xa;Daca cycle_ms a expirat:&#xa;  prepareMessageData() -&gt; send_can_frame()" vertex="1">
+          <mxGeometry height="80" width="330" x="10" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="e_main_fc" value="apeleaza" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="main_group" target="fc_group" edge="1">
+        <mxCell id="e_main_fc" edge="1" parent="1" source="main_group" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="fc_group" value="apeleaza">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_dt_fc" value="#include" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" parent="1" source="dt_group" target="fc_group" edge="1">
+        <mxCell id="e_dt_fc" edge="1" parent="1" source="dt_group" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="fc_group" value="#include">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="160" y="325" />
@@ -111,68 +111,68 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="console" value="Consola (stdout)" style="shape=cylinder3;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="680" y="780" width="240" height="80" as="geometry" />
+        <mxCell id="console" parent="1" style="shape=cylinder3;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#F45B69;strokeColor=#028090;fontSize=13;fontStyle=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Consola (stdout)" vertex="1">
+          <mxGeometry height="80" width="240" x="680" y="780" as="geometry" />
         </mxCell>
-        <mxCell id="e_fc_console" value="printf()&#xa;Tx: ID=0x40 DLC=16 Data=[...]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="fc_group" target="console" edge="1">
+        <mxCell id="e_fc_console" edge="1" parent="1" source="fc_group" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="console" value="printf()&#xa;Tx: ID=0x40 DLC=16 Data=[...]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="legend_group" value="Ciclicitati Mesaje" style="swimlane;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=12;rounded=1;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="50" y="750" width="500" height="140" as="geometry" />
+        <mxCell id="legend_group" parent="1" style="swimlane;startSize=25;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=12;rounded=1;arcSize=10;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Ciclicitati Mesaje" vertex="1">
+          <mxGeometry height="140" width="500" x="50" y="750" as="geometry" />
         </mxCell>
-        <mxCell id="leg1" value="" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="legend_group" vertex="1">
-          <mxGeometry x="10" y="35" width="100" height="20" as="geometry" />
+        <mxCell id="leg1" parent="legend_group" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#F45B69;strokeColor=#028090;labelBackgroundColor=none;fontColor=#E4FDE1;" value="" vertex="1">
+          <mxGeometry height="20" width="100" x="10" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="leg1t" value="LDA_FC1  (ID=0x12)    -- 150ms, DLC 8, date statice" style="text;fontSize=11;align=left;" parent="legend_group" vertex="1">
-          <mxGeometry x="120" y="32" width="370" height="25" as="geometry" />
+        <mxCell id="leg1t" parent="legend_group" style="text;fontSize=11;align=left;labelBackgroundColor=none;fontColor=#E4FDE1;" value="LDA_FC1  (ID=0x12)    -- 150ms, DLC 8, date statice" vertex="1">
+          <mxGeometry height="25" width="370" x="120" y="32" as="geometry" />
         </mxCell>
-        <mxCell id="leg2" value="" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="legend_group" vertex="1">
-          <mxGeometry x="10" y="60" width="100" height="20" as="geometry" />
+        <mxCell id="leg2" parent="legend_group" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#F45B69;strokeColor=#028090;labelBackgroundColor=none;fontColor=#E4FDE1;" value="" vertex="1">
+          <mxGeometry height="20" width="100" x="10" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="leg2t" value="LDA_FC2  (ID=0xAB)    -- 150ms, DLC 8, date statice" style="text;fontSize=11;align=left;" parent="legend_group" vertex="1">
-          <mxGeometry x="120" y="57" width="370" height="25" as="geometry" />
+        <mxCell id="leg2t" parent="legend_group" style="text;fontSize=11;align=left;labelBackgroundColor=none;fontColor=#E4FDE1;" value="LDA_FC2  (ID=0xAB)    -- 150ms, DLC 8, date statice" vertex="1">
+          <mxGeometry height="25" width="370" x="120" y="57" as="geometry" />
         </mxCell>
-        <mxCell id="leg3" value="" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="legend_group" vertex="1">
-          <mxGeometry x="10" y="85" width="100" height="20" as="geometry" />
+        <mxCell id="leg3" parent="legend_group" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#F45B69;strokeColor=#028090;labelBackgroundColor=none;fontColor=#E4FDE1;" value="" vertex="1">
+          <mxGeometry height="20" width="100" x="10" y="85" as="geometry" />
         </mxCell>
-        <mxCell id="leg3t" value="MSG_0x40  (ID=0x40)   -- 40ms, DLC 16, random + contor" style="text;fontSize=11;align=left;fontStyle=1;" parent="legend_group" vertex="1">
-          <mxGeometry x="120" y="82" width="370" height="25" as="geometry" />
+        <mxCell id="leg3t" parent="legend_group" style="text;fontSize=11;align=left;fontStyle=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="MSG_0x40  (ID=0x40)   -- 40ms, DLC 16, random + contor" vertex="1">
+          <mxGeometry height="25" width="370" x="120" y="82" as="geometry" />
         </mxCell>
-        <mxCell id="leg4" value="" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="legend_group" vertex="1">
-          <mxGeometry x="10" y="110" width="100" height="20" as="geometry" />
+        <mxCell id="leg4" parent="legend_group" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#F45B69;strokeColor=#028090;labelBackgroundColor=none;fontColor=#E4FDE1;" value="" vertex="1">
+          <mxGeometry height="20" width="100" x="10" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="leg4t" value="MSG_0x12DD5528 (ID=0x12DD5528) -- 80ms, DLC 64, random + contor" style="text;fontSize=11;align=left;fontStyle=1;" parent="legend_group" vertex="1">
-          <mxGeometry x="120" y="107" width="370" height="25" as="geometry" />
+        <mxCell id="leg4t" parent="legend_group" style="text;fontSize=11;align=left;fontStyle=1;labelBackgroundColor=none;fontColor=#E4FDE1;" value="MSG_0x12DD5528 (ID=0x12DD5528) -- 80ms, DLC 64, random + contor" vertex="1">
+          <mxGeometry height="25" width="370" x="120" y="107" as="geometry" />
         </mxCell>
-        <mxCell id="byte_group" value="Layout Payload Mesaje Noi (data[])" style="swimlane;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=12;rounded=1;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="1100" y="750" width="450" height="140" as="geometry" />
+        <mxCell id="byte_group" parent="1" style="swimlane;startSize=25;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=12;rounded=1;arcSize=10;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Layout Payload Mesaje Noi (data[])" vertex="1">
+          <mxGeometry height="140" width="450" x="1100" y="750" as="geometry" />
         </mxCell>
-        <mxCell id="byte0" value="data[0]&#xa;static" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" parent="byte_group" vertex="1">
-          <mxGeometry x="10" y="35" width="60" height="40" as="geometry" />
+        <mxCell id="byte0" parent="byte_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=9;labelBackgroundColor=none;fontColor=#E4FDE1;" value="data[0]&#xa;static" vertex="1">
+          <mxGeometry height="40" width="60" x="10" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="byte1" value="data[1]&#xa;static" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" parent="byte_group" vertex="1">
-          <mxGeometry x="80" y="35" width="60" height="40" as="geometry" />
+        <mxCell id="byte1" parent="byte_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=9;labelBackgroundColor=none;fontColor=#E4FDE1;" value="data[1]&#xa;static" vertex="1">
+          <mxGeometry height="40" width="60" x="80" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="byte2" value="data[2]&#xa;hi: static&#xa;lo: contor&#xa;1..F" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="byte_group" vertex="1">
-          <mxGeometry x="150" y="35" width="70" height="55" as="geometry" />
+        <mxCell id="byte2" parent="byte_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=9;labelBackgroundColor=none;fontColor=#E4FDE1;" value="data[2]&#xa;hi: static&#xa;lo: contor&#xa;1..F" vertex="1">
+          <mxGeometry height="55" width="70" x="150" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="byte3" value="data[3]&#xa;random" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="byte_group" vertex="1">
-          <mxGeometry x="230" y="35" width="60" height="40" as="geometry" />
+        <mxCell id="byte3" parent="byte_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=9;labelBackgroundColor=none;fontColor=#E4FDE1;" value="data[3]&#xa;random" vertex="1">
+          <mxGeometry height="40" width="60" x="230" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="byteN" value="...&#xa;random" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="byte_group" vertex="1">
-          <mxGeometry x="300" y="35" width="50" height="40" as="geometry" />
+        <mxCell id="byteN" parent="byte_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=9;labelBackgroundColor=none;fontColor=#E4FDE1;" value="...&#xa;random" vertex="1">
+          <mxGeometry height="40" width="50" x="300" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="byteLast" value="data[DLC-1]&#xa;random" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="byte_group" vertex="1">
-          <mxGeometry x="360" y="35" width="80" height="40" as="geometry" />
+        <mxCell id="byteLast" parent="byte_group" style="rounded=1;whiteSpace=wrap;fillColor=#F45B69;strokeColor=#028090;fontSize=9;labelBackgroundColor=none;fontColor=#E4FDE1;" value="data[DLC-1]&#xa;random" vertex="1">
+          <mxGeometry height="40" width="80" x="360" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="byte_note" value="Nibble inferior data[2]: 01 -&gt; 02 -&gt; ... -&gt; 0F -&gt; 01 (ciclic)" style="text;fontSize=10;fontStyle=2;align=center;" parent="byte_group" vertex="1">
-          <mxGeometry x="10" y="100" width="430" height="25" as="geometry" />
+        <mxCell id="byte_note" parent="byte_group" style="text;fontSize=10;fontStyle=2;align=center;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Nibble inferior data[2]: 01 -&gt; 02 -&gt; ... -&gt; 0F -&gt; 01 (ciclic)" vertex="1">
+          <mxGeometry height="25" width="430" x="10" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="fs_group" value="Structura Fisiere (dupa implementare)" style="swimlane;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=12;rounded=1;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="1110" y="100" width="370" height="230" as="geometry" />
+        <mxCell id="fs_group" parent="1" style="swimlane;startSize=25;fillColor=#F45B69;strokeColor=#028090;fontStyle=1;fontSize=12;rounded=1;arcSize=10;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Structura Fisiere (dupa implementare)" vertex="1">
+          <mxGeometry height="230" width="370" x="1110" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="fs_tree" value="Project_P1/C/sw/&#xa;  main.c                       (+ srand, scheduler)&#xa;  DataTypes/inc/&#xa;    Types.h                     (neschimbat)&#xa;  FlowControl/&#xa;    inc/&#xa;      Fcontrol.h                (CANFrame extins)&#xa;      Messages.h                (4 mesaje)&#xa;    src/&#xa;      Fcontrol.c                (+ prepareMessageData)&#xa;      MessagesGen.c             (+ MSG_0x40, MSG_0x12DD5528)" style="text;fontSize=10;fontFamily=Courier New;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;whiteSpace=wrap;" parent="fs_group" vertex="1">
-          <mxGeometry x="10" y="30" width="350" height="190" as="geometry" />
+        <mxCell id="fs_tree" parent="fs_group" style="text;fontSize=10;fontFamily=Courier New;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#E4FDE1;" value="Project_P1/C/sw/&#xa;  main.c                       (+ srand, scheduler)&#xa;  DataTypes/inc/&#xa;    Types.h                     (neschimbat)&#xa;  FlowControl/&#xa;    inc/&#xa;      Fcontrol.h                (CANFrame extins)&#xa;      Messages.h                (4 mesaje)&#xa;    src/&#xa;      Fcontrol.c                (+ prepareMessageData)&#xa;      MessagesGen.c             (+ MSG_0x40, MSG_0x12DD5528)" vertex="1">
+          <mxGeometry height="190" width="350" x="10" y="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

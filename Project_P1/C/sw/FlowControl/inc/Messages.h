@@ -2,16 +2,20 @@
 #define MESSAGES_H
 #include "Fcontrol.h"
 
-#define MESSAGES_COUNT 2
+#define MESSAGES_COUNT 4
 
 extern uint8 messageCounter;
 extern CANFrame LDA_FC1;
 extern CANFrame LDA_FC2;
+extern CANFrame MSG_0x40;
+extern CANFrame MSG_0x12DD5528; 
 extern CANFrame CAN_MESSAGES[MESSAGES_COUNT];
 
 static inline void initializeMessages() {
     CAN_MESSAGES[0] = LDA_FC1;
     CAN_MESSAGES[1] = LDA_FC2;
+    CAN_MESSAGES[2] = MSG_0x40;
+    CAN_MESSAGES[3] = MSG_0x12DD5528;
 }
 
 #endif /* MESSAGES_H */

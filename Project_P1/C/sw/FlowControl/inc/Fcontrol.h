@@ -8,16 +8,20 @@
 // Constants for CAN frame
 #define CAN_CLS_SIZE 8  // 8-byte CAN payload
 
+#define CAN_MAX_SIZE 64 //64-byte CAN payload
+
 /**
  * Structura corespondenta unui mesaj de CAN de tip clasic
  * DLC-ul este maxim 8 bytes
  */
 typedef struct {
-    uint8 id;                             // CAN ID
-    uint8 data[CAN_CLS_SIZE];             // Data array
+    uint32 id;                             // CAN ID
+    uint8 data[CAN_MAX_SIZE];             // Data array
     uint8 dlc;                            // Data Length Code  
 } CANFrame;
 
+
 void send_can_frame(CANFrame frame);
 void sendMessages();
+
 #endif /* FCONTROL_H */
